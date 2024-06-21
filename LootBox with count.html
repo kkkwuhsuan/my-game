@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header" style="text-align:center;">
+        <img src="Picture/background1.png" style="width:200px;">冬季慶典QUOKKA
+    </div>
+    <p>點擊熱夠堡抽獎！</p>
+    <p>點擊棉花糖了解更多!</p>
+    <!--累計抽卡張數!-->
+    <table class="tb1">
+        <tr>
+            <th> <img src=Picture/money.png style="width:25px;"> 代幣</th>
+            <td><em id="allmoney">0</em></td>
+        </tr>
+        <tr>
+            <th>累計抽卡張數</th>
+            <td><em id="count">0</em> 張</td>
+        </tr>
+        <tr>
+            <th>抽卡次數</th>
+            <td><span id="count1">0</span>次</td>
+        </tr>
+    </table>
+    <!--各類卡片累計數!-->
+    <table class="tb2">
+        <caption>各類卡片累計數</caption>
+        <thead>
+            <tr>
+                <th>SSR</th>
+                <th>SR</th>
+                <th>R</th>
+                <th>N</th>
+            </tr>
+        </thead>
+        <tr>
+            <td><em id="countssr">0</em></td>
+            <td><em id="countsr">0</em></td>
+            <td><em id="countr">0</em></td>
+            <td><em id="countn">0</em></td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- 抽卡!-->
+    <audio id="audio" src=""></audio>
+    <div style="text-align:center;">
+        <button class="btn2" onclick="one()">一單抽</button>
+        <button class="btn2" onclick="ten()">十連抽</button>
+        <button class="btn2" onclick="store();">代幣儲值</button>
+    </div>
+    <div class="box">
+        <p id="demo"></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="dialog">
+        <div class="title">功能設計</div>
+        <div class="content">
+            <div>
+                <p>1.改變卡片的外觀</p>
+                <p>2.按下抽卡按鈕時會播放背景音效</p>
+                <p>3.計算累計抽卡張數和抽卡次數</p>
+                <p>4.統計各類卡的累計數目</p>
+                <p>5.設計按鈕樣式</p>
+                <p>6.新增計算代幣功能,一抽80代幣,10抽650代幣</p>
+                <p>7.新增代幣儲值功能，可自行輸入要儲值的金額，並計算總代幣</p>
+                <p>8.點擊「熱狗」即可抽代幣,利用陣列，計算抽到的代幣並加到總代幣</p>
+                <p>9.限制抽代幣點擊時間,抽完一次後必須等待3分鐘後才可再次抽獎</p>
+                <p>10.結束抽代幣遊戲可點選網頁任何地方,即可關閉視窗</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="cancelBtn">了解</div>
+        </div>
+    </div>
+    <div class="header1">
+        <figure onclick="showDialogBtn()">
+            <img src=Picture/m.gif style="width:150px;">
+        </figure>
+    </div>
+
+    <!--抽代幣-->
+    <div class="window-container" id="window-container">
+        <div class="window-pop" id="window-pop">
+            <!-- <div class="window-content">-->
+            <div class="window-title">抽代幣！</div>
+            <p class="window-content">快來試試你的手氣 抽免費代幣！</p>
+            <em><img src=Picture/money5.png style="width:400px;"></em>
+            <div class="window-content2">
+                <br><br><br>
+                <p id="number"></p>
+                <div class="window-content3">
+                    <p id="luckyman"></p>
+                </div>
+                <p id="talk"></p>
+                <button class="btn3" id="myBtn">抽獎</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="header2">
+        <figure onclick="customizeWindowEvent()">
+            <img src=Picture/k.gif style="width:200px;">
+        </figure>
+    </div>
+    <!--所有卡片-->
+    <div class="card"><img src=Picture/card.png style="width:700px;"></div>
+
+    <script src="java.js"></script>
+
+</body>
+
+</html>
